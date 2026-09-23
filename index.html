@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Secure Student App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">JAVA FULL-STACK SECURITY LAB</p>
+      <h1>Secure Student Management</h1>
+      <p>JWT • BCrypt • RBAC • Validation • CORS • Rate limiting</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <input id="rName" placeholder="Name" required maxlength="80">
+          <input id="rEmail" type="email" placeholder="Email" required>
+          <input id="rPassword" type="password" placeholder="Password (8+ chars)" minlength="8" required>
+          <button>Create account</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input id="lEmail" type="email" placeholder="Email" required>
+          <input id="lPassword" type="password" placeholder="Password" required>
+          <button>Login</button>
+        </form>
+      </div>
+
+      <div class="card full">
+        <h2>Dashboard</h2>
+        <div class="actions">
+          <button id="profileBtn">My profile</button>
+          <button id="adminBtn">Admin: list users</button>
+          <button id="logoutBtn" class="secondary">Logout</button>
+        </div>
+        <pre id="output">Not authenticated.</pre>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
